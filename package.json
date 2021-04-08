@@ -2,10 +2,15 @@
   "name": "quote-generator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "parcel serve ./src/index.html",
-    "build": "parcel build ./src/index.html"
+    "prebuild": "rm -rf dist",
+    "build": "parcel build ./src/index.html --public-url ./"
+  },
+  "targets": {
+    "app": {
+      "context": "browser"
+    }
   },
   "keywords": [],
   "author": "",
